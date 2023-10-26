@@ -114,3 +114,26 @@ Array.Clear(vecs);
 ```
 This specific test draws a '1' to a 10x10 array of integers using a known brush size and coordinates. Using the result, we can check against an expected array (shown), and fail the test if it does not work.
 > Note that `Asserter.assert` is a custom function to assert test values. The standard `Debug.Assert` was not used so more debug information could be printed to the screen on failure. As it would not be optimised away when building a release build, these tests have been removed for the final implementation.
+
+### `getSlice1DFromArray1D<T>(in T[], int, int)`
+This function gets a 'slice' or range of values from an array
+```c#
+public static T[] getSlice1DFromArray1D<T>(in T[] values, int start, int length)
+{
+	return values.Skip(start).Take(length).ToArray();
+}
+```
+### `getSlice2DFromArray2D<T>(in T[,], int, int, int, int, out T[,])`
+This function gets a 2D 'slice' or area of values from within a 2D array. Using the 'top left corner' and the 'bottom right corner', a selection should be made, and copied from the immutable array `values` into the `out` array ret.
+ ```c#
+public static void getSlice2DFromArray2D<T>(in T[,] values, int xStart, int yStart, int xEnd, int yEnd, out T[,] ret)
+{
+	int width = values.GetLength(0);
+	int height = values.GetLength(1);
+	ret = new T[xEnd - xStart, yEnd - yStart];
+	for (int i = xStart; i < xEnd; i++) for (int j = yStart; i < yEnd; j++)
+	{
+		ret[i - xStart, j - yStart] = values[i, j];
+	}
+}
+```

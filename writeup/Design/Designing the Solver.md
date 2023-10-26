@@ -8,7 +8,8 @@ As should be obvious, both major parts require a function to diffuse and advect 
 The computing of the boundary conditions is important because else, it is possible for some of the most fundamental laws of the universe to not be obeyed: conservation of mass and conservation of energy.
 ##### Auxiliary Computations
 One of the main steps that is repeated multiple times is needing to solve a set of linear equations for some variables. This requires a function that can work on almost any vector field, and returns a vector field once that is done.
-
 ### Externally Visible Functions
-As the language being used is C#, it is required that the solver be entirely contained in a class. Thus, the class must have a constructor. This constructor therefore has the responsibility of allocating the memory required for the vector fields given a size. The mathematical model also requires a timestep (also known as 'deltaTime' or in the case of Unity, `UnityEngine.Time.DeltaTime`)
+As the language being used is C#, it is required that the solver be entirely contained in a class. Thus, the class must have a constructor. This constructor therefore has the responsibility of allocating the memory required for the vector fields given a size. The mathematical model also requires a timestep (also known as 'deltaTime' or in the case of Unity, `UnityEngine.Time.DeltaTime`) which is a single-precision floating point number set as an argument to the constructor.
+> In the simulator's current state, deltaTime is maintained from instantiation. This may be changed to allow for a continuously updating deltaTime later.
 
+![[Solver2D_Class_Diagram.png]]
