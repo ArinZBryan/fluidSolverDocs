@@ -1,6 +1,17 @@
+This project is a real-time, fully interactable incompressible fluid simulator that can be saved to disk and resumed at any time. The fluid simulation is able to interact with all kinds of objects within the simulation. From rigidbodies (normal hard objects), to force fields and particle systems. 
 ## Features of this Solution
-
-
+- Real-time fluid simulation
+	- Customisable simulation aesthetics
+		- Attachable particle systems
+		- Colour and tint options
+	- Exportable to common media formats
+		- MP4
+		- MOV
+		- Image Sequences (PNG / JPG / TGA / BMP)
+	- Fully interactive simulation
+		- Variety of simulatable objects and interactions
+	- Fully deterministic simulation
+	- Loadable scenarios from disk to simulation.
 
 ## Technical Specifications
 This project is an implementation of a fluid simulator, using the methods outlined in the 2003 paper '*Real-Time Fluid Dynamics for Games*' by Jos Stam. This implementation, unlike the original code originally provided with the initial release of the paper in a conference, is written in C#, using Unity as the rendering and 3D engine. It also provides access to the keyboard and an API with which to access the GPU if needed. The version of Unity being used is version `2021.3.23f1`. This mandates the use of either IL2CPP, or Mono 6.4 implementing the .NET standard version 2.1.

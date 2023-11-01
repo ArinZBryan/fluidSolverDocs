@@ -7,16 +7,12 @@ kanban-plugin: basic
 ## To Do
 
 - [ ] Project Title
-- [ ] Stakeholders
 - [ ] Cover Page
 - [ ] Table Of Contents
 - [ ] Styles
 - [ ] Headers / Footers
 - [ ] References
-- [ ] Clear Project Description
 - [ ] How to follow up research
-- [ ] Discussed suitable approaches
-- [ ] Justified chosen approach
 - [ ] Justified each requirement based on research evidence
 - [ ] Stated any measurable success criteria for each requirement.
 
@@ -25,17 +21,21 @@ kanban-plugin: basic
 
 - [ ] Planned interview questions
 - [ ] Planned survey questions
-- [ ] Project Plan w/ milestones
 
 
 ## Doing
 
-- [ ] Descripton of Features
+- [ ] Discussed suitable approaches
+- [ ] Justified chosen approach
 
 
 ## Done
 
 **Complete**
+- [x] Clear Project Description
+- [x] Stakeholders
+- [x] Project Plan w/ milestones
+- [x] Descripton of Features
 - [x] Project Proposal
 - [x] Proposal Approved
 - [x] Difficulty/Size Considerations

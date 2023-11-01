@@ -12,4 +12,4 @@ One of the main steps that is repeated multiple times is needing to solve a set 
 As the language being used is C#, it is required that the solver be entirely contained in a class. Thus, the class must have a constructor. This constructor therefore has the responsibility of allocating the memory required for the vector fields given a size. The mathematical model also requires a timestep (also known as 'deltaTime' or in the case of Unity, `UnityEngine.Time.DeltaTime`) which is a single-precision floating point number set as an argument to the constructor.
 > In the simulator's current state, deltaTime is maintained from instantiation. This may be changed to allow for a continuously updating deltaTime later.
 
-![[Solver2D_Class_Diagram.png]]
+The simulator also implements the `ISimulator` interface, which defines one public method: `public UnityEngine.RenderTexture getCurrentTexture()`. This must return the image currently computed by the simulator. 

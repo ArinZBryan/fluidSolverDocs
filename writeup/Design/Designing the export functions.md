@@ -8,7 +8,11 @@ The exporter class is a class that needs to be able to export the simulation in 
 	- JPEG
 - As a reloadable format
 
-It is important that this class be re-usable no matter the simulation, and there should be scope for adding formats to export to in the future. Should a new type of video format become available in the future, there should be minimal modifications needed to support it. To make this work, I will be using an open-source library called FFMpeg, or more specifically, a library called . This is a C# wrapper for the FFMpeg executable, letting me interact with the native code functions without having to spin up a terminal and interact with it via text.
+## Implementation
+#### The Result Dispatcher
+To accomplish this, we are using composition to inject a class implementing the `IImageDestination` interface into a new object, the `ResultDispatcher`. This object should never be instantiated more than once, and thus can be considered a singleton. However, as the only place this will be instantiated is as a gameobject upon scene load, it should be unnecessary to implement protections against this and the desyncs and overwriting that would occur as a result. This object takes in a `UnityEngine.RenderTexture` from a valid `ISimulator` and dispatches it to the relevant `IImageDestination`s. This will almost always include `Destination.Viewport`, but may also include `Destination.ImageFile`, `Destination.VideoFile` or `Destination.ImageSequence`. Note that `Destination.ImageFile` is designed for taking snapshots  of the simulation at *one* point in time, rather than a running view (use `Destination.ImageSequence` or `Destination.VideoFile` for this).
+#### The Image Destinations
+All image destinations are bundled together under the `Destination` class. This class has no function other than code organisation and holding the `FileFormat` enumerator. Each sub-class must implement the `IImageDestination` interface to be passed to the [result dispatcher](#The%20Result%20Dispatcher). Each of these must implement the functions `public void sendCurrentImage()`, `public void init(string, Destination.FileFormat)` and `public string destroy()`
+![[Simplan-dark.svg]]
 
-### Class Structure
 
