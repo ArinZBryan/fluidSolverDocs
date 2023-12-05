@@ -17,17 +17,17 @@ As part of the animation suite, it is possible to apply several different types 
 - Cloth Simulation
 - Fluid Simulation
 Shown below is an example user interface for configuring the parameters of a simulation:
-![[Blender-FSIM-UI.png]]
+![Blender-FSIM-UI.png](Blender-FSIM-UI.png)
 It is plain to see that this consists of a dizzying array of options and toggles, with more hidden behind dropdowns and buttons besides. For a newcomer to the industry, a hobbyist or even just a professional attempting to get done quickly, this amount of tinkering opportunity can be overwhelming. Though this does provide room for many different options and boxes, which suggests that with some further organisation, this method of presenting options to the user could be optimal.
 ###### Simulation Nodes
 Blender also provides another, even more customisable method of simulating objects. This is the simulation node.
-![[Blender-Simulation-Nodes.png]]
+![Blender-Simulation-Nodes.png](Blender-Simulation-Nodes.png)
 This is a highly-procedural node-bases system for controlling simulations, and outputting a modified geometry based on the simulation used. This allows for more than just the basic simulations, and allows for completely custom simulations to be made quickly
 ##### 3ds Max
 Much like Blender, Autodesk 3ds Max is a full 3D graphics workstation. It combines tools for modelling, sculpting, simulating and animating. Further, these tools are all able to be combined together seamlessly, not that doing so is particularly easy to run on ordinary hardware.
-![[3dsmax2.webp]]
+![3dsmax2.webp](3dsmax2.webp)
 The software is commonly used all throughout the 3D graphics pipeline, in big and small studios alike. However, unlike blender, it must be rented through a costly subscription model.
 ##### The interface
-![[3dsmax1.jpg]]
+![3dsmax1.jpg](3dsmax1.jpg)
 The interface for simulation parameters in 3ds Max is much like the interface for blender. However, unlike blender, such windows can be separated and moved around to create a workspace more tailored to its user. Such a similar interface is useful when dealing with many types of simulation, with plugins available for even more, and more specialised ones at that. 
 
