@@ -1,6 +1,4 @@
 ### Eulerian vs Lagrangian
-There are, in most general terms, 
-
 There are two main approaches to simulating a fluid, Position Based Dynamics, and the Navier-Stokes Equations. The former is the technique commonly used when the highest fidelity is a requirement, and time spent computing the simulation isn't an issue. It also lends itself to hand animation more easily. In this sense, it allows for simulations to be 'faked' - a pre-determined ending or state is hand animated, and the simulator solves the fluid up to the point of that state. The Navier-Stokes equations a more computationally-friendly approach which leverages specific equations to give a result.
 ##### The Biggest Difference
 This method is based on the idea that all things that need to be modelled can be modelled as particles, sometimes with a defined size which can then be linked together into objects using specific constraints on the particles. For instance, in a rigid body simulation, the particles that make up an object are held very rigidly together, with constraints that barely give way under pressure. On the other hand a soft body may use a similar method but with constraints that more readily deform and stretch under pressure.

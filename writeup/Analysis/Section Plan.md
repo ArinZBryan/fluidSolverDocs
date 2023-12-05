@@ -12,14 +12,12 @@ kanban-plugin: basic
 - [ ] Styles
 - [ ] Headers / Footers
 - [ ] References
-- [ ] How to follow up research
 - [ ] Justified each requirement based on research evidence
 - [ ] Stated any measurable success criteria for each requirement.
 
 
 ## Needs Preparation
 
-- [ ] Planned interview questions
 - [ ] Planned survey questions
 
 
@@ -38,7 +36,10 @@ kanban-plugin: basic
 - [x] Descripton of Features
 - [x] Project Proposal
 - [x] Proposal Approved
+- [x] Re-write functions of program (as end user and developer)
 - [x] Difficulty/Size Considerations
+- [x] How to follow up research
+- [x] Planned interview questions
 - [x] Programming Language
 - [x] Version Control Strategy
 - [x] Description of problems solvable by computational methods
