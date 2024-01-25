@@ -17,7 +17,7 @@ As part of the animation suite, it is possible to apply several different types 
 - Cloth Simulation
 - Fluid Simulation
 Shown below is an example user interface for configuring the parameters of a simulation:
-![Blender-FSIM-UI.png](Blender-FSIM-UI.png)
+![Blender-FSIM-UI.png](./../Images/Blender-FSIM-UI.png)
 It is plain to see that this consists of a dizzying array of options and toggles, with more hidden behind dropdowns and buttons besides. For a newcomer to the industry, a hobbyist or even just a professional attempting to get done quickly, this amount of tinkering opportunity can be overwhelming. Though this does provide room for many different options and boxes, which suggests that with some further organisation, this method of presenting options to the user could be optimal.
 ###### Simulation Nodes
 Blender also provides another, even more customisable method of simulating objects. This is the simulation node.
